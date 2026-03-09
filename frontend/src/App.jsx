@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 
-const API = '/api'
+const API = import.meta.env.VITE_API_URL || 'https://clipdrop-backend.onrender.com'
 
 const PLATFORMS = [
   { name: 'YouTube', icon: '▶' },
@@ -296,7 +296,7 @@ export default function App() {
         {/* Footer */}
         <footer style={styles.footer}>
           <span style={{ color: 'var(--muted)' }}>
-            Powered by yt-dlp · 1000+ platforms supported
+            Powered by Md Shagaf Raiyan Rashid
           </span>
         </footer>
 
